@@ -6,7 +6,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 // creating box
 var leftRect, rightRect, bottomRect;
-var bottomRectBody;
+var bottomRectBody, leftRectBody,rightRectBody;
 function preload()
 {
 	helicopterIMG=loadImage("helicopter.png")
@@ -44,7 +44,10 @@ function setup() {
 	World.add(world, packageBody);
 	World.add(world,bottomRectBody);
 	World.add(world, bottomRect);
-
+        World.add(world,leftRectBody);
+	World.add(world, leftRect);
+	World.add(world,rightRectBody);
+	World.add(world, rightRect);
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
@@ -62,6 +65,10 @@ function draw() {
   packageSprite.y= packageBody.position.y 
   bottomRect.x = bottomRectBody.position.x
   bottomRect.y = bottomRectBody.position.y
+  leftRect.x = leftRectBody.position.x
+  leftRect.y = leftRectBody.position.y	
+  rightRectRect.x = rightRectBody.position.x
+  rightRect.y = rightRectBody.position.y	
   drawSprites();
  
 }
