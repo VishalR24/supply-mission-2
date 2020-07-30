@@ -24,7 +24,8 @@ function setup() {
 	rightRect = createSprite(480, 620, 20, 100)
 	rightRect.shapeColor = color(255, 0, 0)
 	bottomRectBody = Bodies.rectangle(380, 650, 200, 20,{isStatic: true})
-
+        rightRectBody = Bodies.rectangle(480, 620, 20, 100,{isStatic: true})
+	leftRectBody = Bodies.rectangle(280, 620, 20, 100,{isStatic: true})
 	packageSprite = createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
@@ -44,7 +45,7 @@ function setup() {
 	World.add(world, packageBody);
 	World.add(world,bottomRectBody);
 	World.add(world, bottomRect);
-        World.add(world,leftRectBody);
+        World.add(world, leftRectBody);
 	World.add(world, leftRect);
 	World.add(world,rightRectBody);
 	World.add(world, rightRect);
