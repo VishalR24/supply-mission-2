@@ -68,7 +68,7 @@ function draw() {
   bottomRect.y = bottomRectBody.position.y
   leftRect.x = leftRectBody.position.x
   leftRect.y = leftRectBody.position.y	
-  rightRectRect.x = rightRectBody.position.x
+  rightRect.x = rightRectBody.position.x
   rightRect.y = rightRectBody.position.y	
   drawSprites();
  
